@@ -6,7 +6,7 @@ import Adafruit_DHT
 import MySQLdb
 
 # establish databse connection and cursor for querying
-sb = mySQLsb.connect(host="localhost", user="root", passwd="", db="SensorData")
+db = MySQLdb.connect(host="localhost", user="root", passwd="something", db="SensorData")
 
 #utilize adafruit library to retrieve data from humidity/temp sensors
 def getSensorData(GPIO_number):
@@ -16,7 +16,7 @@ def getSensorData(GPIO_number):
 def createTableEntry(GPIO_number, time, humidity, tempurature):
     try:
         cursor = db.cursor()
-        cursor.execute("INSERT INTO DATA VALUES ('" + str(GPIO_number) + "', '" + str(time) "', '" + str(humidity) + "', '" + str(tempurature) + "')")
+        cursor.execute("INSERT INTO Data VALUES ('" + str(GPIO_number) + "', '" + str(time) + "', '" + str(humidity) + "', '" + str(tempurature) + "')")
         db.commit()
     except:
         db.rollback()
