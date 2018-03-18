@@ -32,7 +32,7 @@ def main():
             currentDateTime = datetime.datetime.now()
             createTableEntry(17, currentDateTime, Humidity17, Tempurature17)
             createTableEntry(18, currentDateTime, Humidity18, Tempurature18)
-            sleep(300)
+            sleep(900)
         except Exception as inst:
             print type(inst)
             print (inst.args)
