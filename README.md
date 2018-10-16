@@ -12,3 +12,6 @@ This Project contains the code for my IoT like tank monitoring system. The inten
 optional) 2 raspberry pi fans
 
 //TODO: update ReadMe with project architecture, technologies, and anything else needed.
+
+For android application see: https://github.com/JoeAmedeo/Tank_Monitor_App
+For API, see: https://github.com/JoeAmedeo/Tank_Monitor_API
